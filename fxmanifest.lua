@@ -6,10 +6,17 @@ author 'NickBlade#5623'
 shared_scripts { 
    './shared/config.lua' 
 } 
-server_scripts { 
-	'./server/main.lua' 
-} 
+
 client_scripts { 
-	'./client/main.lua', 
-	'./client/modules/framework.lua' 
+	'./client/client.lua', 
+	'./client/modules/framework.lua',
+	'./client/lib/creation.lua'
 } 
+
+server_scripts { 
+	'./server/server.lua',
+	'./server/classes/garage.lua',
+	'@oxmysql/lib/MySQL.lua'
+} 
+
+provide 'garage'
